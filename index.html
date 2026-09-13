@@ -433,22 +433,37 @@
     </div>
 
     <script>
-// Smooth scroll robusto
+// Smooth scroll que funciona mesmo com reduced-motion
 document.getElementById('ctaBtn').addEventListener('click', function(e) {
   e.preventDefault();
   const target = document.getElementById('pricing');
   if (!target) return;
 
-  const headerOffset = 70; // altura do header sticky
-  const elementPosition = target.getBoundingClientRect().top;
-  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  const headerOffset = 70;
+  const targetY = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+  const startY = window.pageYOffset;
+  const distance = targetY - startY;
+  const duration = 700; // ms – podes pôr 900 se quiseres mais lento
+  let startTime = null;
 
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: 'smooth'
-  });
+  function animate(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // ease-in-out
+    const ease = progress < 0.5
+      ? 2 * progress * progress
+      : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+    window.scrollTo(0, startY + distance * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    }
+  }
+
+  requestAnimationFrame(animate);
 });
-
       // FAQ
       document.querySelectorAll(".faq-question").forEach((button) => {
         button.addEventListener("click", () =>
