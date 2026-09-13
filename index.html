@@ -433,13 +433,21 @@
     </div>
 
     <script>
-      // Smooth scroll fallback (funciona melhor em todos os browsers)
-      document.getElementById("ctaBtn").addEventListener("click", function (e) {
-        e.preventDefault();
-        document
-          .getElementById("pricing")
-          .scrollIntoView({ behavior: "smooth" });
-      });
+// Smooth scroll robusto
+document.getElementById('ctaBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+  const target = document.getElementById('pricing');
+  if (!target) return;
+
+  const headerOffset = 70; // altura do header sticky
+  const elementPosition = target.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
+  });
+});
 
       // FAQ
       document.querySelectorAll(".faq-question").forEach((button) => {
