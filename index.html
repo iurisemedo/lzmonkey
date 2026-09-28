@@ -374,10 +374,14 @@
             <button class="faq-question">Where can I get help?</button>
             <div class="faq-answer">
               <p>
-                Contact us through our Telegram gateway:
-                <a href="https://t.me/lzgateway" target="_blank" rel="noopener"
-                  >@lzgateway</a
+                Contact support on Telegram:
+                <a href="https://t.me/juliaa_8149" target="_blank" rel="noopener"
+                  >@juliaa_8149</a
                 >
+                or email
+                <a href="mailto:lzcontent.support@gmail.com"
+                  >lzcontent.support@gmail.com</a
+                >.
               </p>
             </div>
           </div>
@@ -441,6 +445,10 @@
             <span class="policy-sep">·</span>
             <button type="button" class="policy-btn" data-policy="terms">
               Terms of Service
+            </button>
+            <span class="policy-sep">·</span>
+            <button type="button" class="policy-btn" data-policy="removal">
+              Content Removal
             </button>
           </div>
         </div>
@@ -580,19 +588,23 @@ document.getElementById('ctaBtn').addEventListener('click', function(e) {
       const policies = {
         age: {
           title: "Age Disclaimer",
-          body: "<p>This site contains adult content intended for viewers 18 years or older. By entering you confirm you are of legal age in your jurisdiction and consent to viewing adult material. You must be 18 or older to use this site.</p>",
+          body: "<p><strong>18+ only.</strong> This website and the VIP channel contain adult content. By entering or purchasing, you confirm you are at least 18 years old (or the age of majority where you live).</p><p>If you are under 18, leave this site immediately.</p>",
         },
         privacy: {
           title: "Privacy Policy",
-          body: "<p>We collect only the information needed to process your order and deliver access. Payment data is handled securely by our payment provider. We do not sell your personal information. For support, contact us on Telegram.</p>",
+          body: "<p>We collect only what is needed to run Monkey LZ and deliver access.</p><p><strong>What we process:</strong> Support messages (email, Telegram username, payment screenshots) and basic technical data when you visit the site.</p><p><strong>Payments:</strong> Handled by third-party processors (e.g. Whop, Stripe). We do not store your card numbers.</p><p><strong>Sharing:</strong> We do not sell your personal information. Providers may process data only to operate payments and hosting.</p><p><strong>Your rights (EU/Portugal):</strong> You may request access, correction or deletion of data we hold, within legal limits.</p><p><strong>Contact:</strong> <a href=\"mailto:lzcontent.support@gmail.com\">lzcontent.support@gmail.com</a> · Telegram @juliaa_8149</p>",
         },
         refund: {
           title: "Refund Policy",
-          body: "<p>All sales are final and non-refundable. Digital access is delivered immediately after payment. If you have an issue with delivery, contact support and we will resolve access problems.</p>",
+          body: "<p><strong>All sales are final and non-refundable</strong> once digital access has been delivered or made available.</p><p>VIP access is delivered via Telegram after payment.</p><p><strong>Exception:</strong> If you paid and did not receive access due to a delivery failure on our side, contact support with proof of payment. We will fix access or provide an appropriate remedy.</p><p><strong>Support:</strong> <a href=\"mailto:lzcontent.support@gmail.com\">lzcontent.support@gmail.com</a> · @juliaa_8149</p>",
         },
         terms: {
           title: "Terms of Service",
-          body: "<p>By purchasing you agree to use the content for personal entertainment only. Redistribution, resale or public sharing of VIP content is prohibited. We reserve the right to revoke access in case of abuse.</p>",
+          body: "<p>By using Monkey LZ / Leaks Zone and purchasing access, you agree to these terms.</p><p><strong>Service:</strong> Digital VIP access to Monkey &amp; Omegle content, delivered via Telegram.</p><p><strong>Third-party content:</strong> Content is sourced from third parties. Access is for personal use only.</p><p><strong>Prohibited:</strong> Redistribution, resale or public sharing of VIP content. Abuse may result in revoked access.</p><p><strong>Payments:</strong> Processed by third parties. We do not store card details.</p><p><strong>Contact:</strong> <a href=\"mailto:lzcontent.support@gmail.com\">lzcontent.support@gmail.com</a> · @juliaa_8149</p>",
+        },
+        removal: {
+          title: "Content Removal",
+          body: "<p>If you believe content available through our service should be removed, email <a href=\"mailto:lzcontent.support@gmail.com\">lzcontent.support@gmail.com</a> with:</p><p>1. Your name and contact details<br>2. Description of the content<br>3. Where it appears (URL or channel)<br>4. Why it should be removed<br>5. A good-faith statement that your request is accurate</p><p>We aim to review valid requests within <strong>72 hours</strong>.</p>",
         },
       };
       const modal = document.getElementById("policyModal");
