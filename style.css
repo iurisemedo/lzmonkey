@@ -506,3 +506,47 @@ body {
 .support-socials a:hover {
   color: #f06a8b;
 }
+/* Header social icons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.header-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  color: #f9a8d4;
+  background: rgba(244, 114, 182, 0.12);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.header-social:hover {
+  background: rgba(244, 114, 182, 0.28);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .logo-text {
+    display: none;
+  }
+
+  .header-right {
+    gap: 0.45rem;
+  }
+
+  .header-social {
+    width: 34px;
+    height: 34px;
+  }
+
+  .btn-more {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+}
