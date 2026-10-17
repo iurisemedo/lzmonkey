@@ -577,7 +577,7 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 78vh;
+  min-height: 92vh;
 }
 
 .hero-bg {
@@ -599,7 +599,8 @@ body {
 /* PC: vídeo completo (grid 5x4 visível), pode ficar um pouco mais “pequeno” */
 .hero-bg-video--desktop {
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .hero-bg-video--mobile {
