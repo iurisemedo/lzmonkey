@@ -577,6 +577,7 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
+  min-height: 78vh;
 }
 
 .hero-bg {
@@ -584,24 +585,52 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background: #0a0a0a;
 }
 
 .hero-bg-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  object-position: center center;
+}
+
+/* PC: vídeo completo (grid 5x4 visível), pode ficar um pouco mais “pequeno” */
+.hero-bg-video--desktop {
+  display: block;
+  object-fit: contain;
+}
+
+.hero-bg-video--mobile {
+  display: none;
 }
 
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, rgba(10, 10, 10, 0.35) 0%, rgba(10, 10, 10, 0.82) 70%),
-    linear-gradient(to bottom, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.92));
+    radial-gradient(ellipse at center, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.78) 70%),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9));
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+}
+
+/* Telemóvel: como antes (cobre a área), outro ficheiro */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-bg-video--desktop {
+    display: none;
+  }
+
+  .hero-bg-video--mobile {
+    display: block;
+    object-fit: cover;
+  }
 }
