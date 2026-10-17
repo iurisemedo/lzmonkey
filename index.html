@@ -63,12 +63,22 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
         <video
-          class="hero-bg-video"
+          class="hero-bg-video hero-bg-video--desktop"
           src="https://pub-042b08b42f074e39a4706e7cbfd05735.r2.dev/hero-bg.mp4"
           autoplay
           muted
           loop
           playsinline
+          preload="metadata"
+        ></video>
+        <video
+          class="hero-bg-video hero-bg-video--mobile"
+          src="https://pub-042b08b42f074e39a4706e7cbfd05735.r2.dev/hero-bg-mobile.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
         ></video>
         <div class="hero-bg-overlay"></div>
       </div>
